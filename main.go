@@ -3,14 +3,11 @@ package main
 import (
 	"fmt"
 
-	"go1.18/generics"
+	"golang.org/x/exp/slices"
 )
 
 func main() {
-	i := []generics.MyInt{1, 2, 3, 4, 5}
-	s := []generics.MyString{"a", "b", "c", "d", "e"}
-	fmt.Println(generics.F(i))
-	fmt.Println(generics.F(s))
+	fmt.Println(slices.BinarySearch([]int{1, 2, 3, 4, 5}, 3))
 }
 
 type Stack[T any] []T

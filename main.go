@@ -2,33 +2,15 @@ package main
 
 import (
 	"fmt"
-	"strconv"
+
+	"go1.18/generics"
 )
 
 func main() {
-	s := New[string]()
-	s.Push("hello")
-	s.Push("hello")
-	fmt.Println(s.Pop())
-	fmt.Println(s.Pop())
-}
-
-// func f[T Stringer](xs []T) []string {
-// 	var result []string
-// 	for _, x := range xs {
-// 		result = append(result, x.String())
-// 	}
-// 	return result
-// }
-
-type Stringer interface {
-	String() string
-}
-
-type MyInt int
-
-func (i MyInt) String() string {
-	return strconv.Itoa(int(i))
+	i := []generics.MyInt{1, 2, 3, 4, 5}
+	s := []generics.MyString{"a", "b", "c", "d", "e"}
+	fmt.Println(generics.F(i))
+	fmt.Println(generics.F(s))
 }
 
 type Stack[T any] []T

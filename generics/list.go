@@ -5,10 +5,12 @@ func F[T StrInt](xs []T) (result []T) {
 	return
 }
 
-type StrInt interface{}
+type StrInt interface {
+	StrInt()
+}
 
 type MyInt int
 type MyString string
 
-func (i MyInt) String()    {}
-func (s MyString) String() {}
+func (i MyInt) StrInt()    {}
+func (s MyString) StrInt() {}

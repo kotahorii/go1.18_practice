@@ -3,16 +3,17 @@ package main
 import (
 	"fmt"
 
-	"golang.org/x/exp/slices"
+	"go1.18/generics"
+	"golang.org/x/exp/constraints"
 )
 
 func main() {
-	fmt.Println(slices.BinarySearch([]int{1, 2, 3, 4, 5}, 3))
+	fmt.Println(generics.IsPrime(10))
 }
 
-type Stack[T any] []T
+type Stack[T constraints.Ordered] []T
 
-func New[T any]() *Stack[T] {
+func New[T constraints.Ordered]() *Stack[T] {
 	v := make(Stack[T], 0)
 	return &v
 }

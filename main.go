@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println(generics.IsPrime(10))
+	fmt.Println(generics.ConvToDecimal("1010"))
 }
 
 type Stack[T constraints.Ordered] []T

@@ -2,16 +2,26 @@ package main
 
 import (
 	"fmt"
+	"math"
+	"strings"
 
 	"golang.org/x/exp/constraints"
 )
 
 func main() {
-	fmt.Println(13 & 14)
-	fmt.Println(13 | 14)
-	fmt.Println(13 ^ 14)
+	fmt.Println(500000 * math.Log2(500000))
+	fmt.Println(4000000 * math.Log2(4000000))
+	fmt.Println(30000000 * math.Log2(30000000))
+	fmt.Println(strings.Repeat("*", 25))
 
-	fmt.Println(8 | 4 | 2 | 1)
+	fmt.Println(math.Pow(3000, 2))
+	fmt.Println(math.Pow(10000, 2))
+	fmt.Println(math.Pow(30000, 2))
+	fmt.Println(strings.Repeat("*", 25))
+
+	fmt.Println(math.Pow(2, 23))
+	fmt.Println(math.Pow(2, 26))
+	fmt.Println(math.Pow(2, 29))
 }
 
 type Stack[T constraints.Ordered] []T

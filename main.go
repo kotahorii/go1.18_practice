@@ -3,12 +3,11 @@ package main
 import (
 	"fmt"
 
-	"go1.18/generics"
 	"golang.org/x/exp/constraints"
 )
 
 func main() {
-	fmt.Println(generics.ConvToDecimal("1010"))
+	fmt.Println(11 ^ 14)
 }
 
 type Stack[T constraints.Ordered] []T

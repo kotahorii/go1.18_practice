@@ -1,14 +1,11 @@
 package main
 
 import (
-	"fmt"
-
-	"go1.18/generics"
 	"golang.org/x/exp/constraints"
 )
 
 func main() {
-	fmt.Println(generics.Factorial(4))
+
 }
 
 type Stack[T constraints.Ordered] []T

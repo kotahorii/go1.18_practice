@@ -2,17 +2,16 @@ package main
 
 import (
 	"fmt"
-	"math"
 
 	"golang.org/x/exp/constraints"
 )
 
 func main() {
-	fmt.Println(math.Sqrt(float64(841)))
-	fmt.Println(math.Pow(29, 2))
+	fmt.Println(13 & 14)
+	fmt.Println(13 | 14)
+	fmt.Println(13 ^ 14)
 
-	fmt.Println(math.Round(math.Pow(1024, 1/5.0)))
-	fmt.Println(math.Pow(4, 5))
+	fmt.Println(8 | 4 | 2 | 1)
 }
 
 type Stack[T constraints.Ordered] []T

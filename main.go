@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println(generics.Divisors(24))
+	fmt.Println(generics.PrimeFactorization(20211225))
 }
 
 type Stack[T constraints.Ordered] []T

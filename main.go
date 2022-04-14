@@ -3,17 +3,12 @@ package main
 import (
 	"fmt"
 
+	"go1.18/generics"
 	"golang.org/x/exp/constraints"
 )
 
 func main() {
-	cnt := 0
-	for i := 1; i <= 5; i++ {
-		for j := i + 1; j <= 5; j++ {
-			cnt++
-		}
-	}
-	fmt.Println(cnt)
+	fmt.Println(generics.Divisors(24))
 }
 
 type Stack[T constraints.Ordered] []T

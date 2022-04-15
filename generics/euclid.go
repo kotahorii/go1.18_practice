@@ -20,3 +20,14 @@ func IsPrime(n int) bool {
 	}
 	return true
 }
+
+func Gcfs(nums []int) (res int) {
+	for i := range nums {
+		if i == 1 {
+			res = Gcf(nums[i-1], nums[i])
+		} else if i >= 2 {
+			res = Gcf(res, nums[i])
+		}
+	}
+	return
+}

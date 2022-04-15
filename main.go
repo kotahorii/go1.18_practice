@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println(generics.PrimeFactorization(20211225))
+	fmt.Println(generics.Gcfs([]int{24, 12, 6, 36}))
 }
 
 type Stack[T constraints.Ordered] []T

@@ -8,7 +8,9 @@ import (
 )
 
 func main() {
-	fmt.Println(generics.Gcfs([]int{24, 12, 6, 36}))
+	prices := []int{100, 200, 300, 400, 100, 200, 300}
+	countMap := generics.Count(prices)
+	fmt.Println(generics.NumberOfSelectGoods(countMap))
 }
 
 type Stack[T constraints.Ordered] []T

@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	fmt.Println(generics.CountPointInTheCircle(1000000))
+	fmt.Println(generics.Solve(1, 10))
 }
 
 type Stack[T constraints.Ordered] []T

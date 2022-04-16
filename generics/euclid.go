@@ -12,6 +12,13 @@ func Gcf(x, y int) int {
 	return x
 }
 
+func GCD(x, y int) int {
+	if y == 0 {
+		return x
+	}
+	return GCD(y, x%y)
+}
+
 func IsPrime(n int) bool {
 	for i := 2; i < int(math.Sqrt(float64(n))+1); i++ {
 		if n%i == 0 {

@@ -2,16 +2,13 @@ package main
 
 import (
 	"fmt"
-	"sort"
 
 	"go1.18/generics"
 	"golang.org/x/exp/constraints"
 )
 
 func main() {
-	a := []int{1, 99999, 2, 99998}
-	sort.Ints(a)
-	fmt.Println(generics.CombiCardsV2(a))
+	fmt.Println(generics.CountPointInTheCircle(1000000))
 }
 
 type Stack[T constraints.Ordered] []T

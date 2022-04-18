@@ -15,3 +15,10 @@ func FlogJump(h []int) int {
 	}
 	return dp[len(h)-1]
 }
+
+func D(n int) int {
+	if n <= 1 {
+		return 1
+	}
+	return D(n-1) + D(n-2)
+}

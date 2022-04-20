@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
-	A, B, C := []int{3, 3}, []int{2, 1}, []int{6, 4}
-	fmt.Println(generics.CalcDistance(A, B, C))
+	xs := []int{0, 2, 1}
+	ys := []int{0, 2, 2}
+	fmt.Println(generics.Nearest(xs, ys))
 }

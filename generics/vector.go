@@ -38,3 +38,16 @@ func CalcDistance(A, B, C []int) float64 {
 
 	return S / BCLength
 }
+
+func Nearest(xs, ys []int) (res float64) {
+	for i := 0; i < len(xs); i++ {
+		for j := i + 1; j < len(ys); j++ {
+			dis := math.Sqrt(math.Pow(float64(xs[i]+xs[j]), 2) +
+				math.Pow(float64(ys[i]+ys[j]), 2))
+			if res == 0 || res > dis {
+				res = dis
+			}
+		}
+	}
+	return
+}

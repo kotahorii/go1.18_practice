@@ -9,7 +9,7 @@ func Sqrt() float64 {
 	r := 2.0
 	a := 2.0
 
-	for i := 1; i <= 5; i++ {
+	for i := 1; i <= 3; i++ {
 		x := a
 		y := a * a
 
@@ -41,4 +41,32 @@ func CubeRoot2() float64 {
 	return a
 }
 
-func BinarySart()
+func BinarySqrt() float64 {
+	l := 1.0
+	r := 2.0
+	for i := 1; i <= 18; i++ {
+		m := (l + r) / 2
+		if m*m < 2 {
+			l = m
+		} else {
+			r = m
+		}
+		fmt.Printf("Step %d: m = %.12f\n", i, m)
+	}
+	return (l + r) / 2
+}
+
+func Q4_3_4() float64 {
+	l := 1.0
+	r := 2.0
+	for i := 1; i <= 18; i++ {
+		m := (l + r) / 2
+		if math.Pow(m, 10) < 1000 {
+			l = m
+		} else {
+			r = m
+		}
+		fmt.Printf("Step %d: m = %.12f\n", i, m)
+	}
+	return (l + r) / 2
+}

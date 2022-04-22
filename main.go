@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(generics.Sqrt())
+	fmt.Println(generics.Q4_4_2())
 }

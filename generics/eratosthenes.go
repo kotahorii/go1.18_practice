@@ -36,3 +36,18 @@ func Q4_4_2() float64 {
 	}
 	return value / float64(n)
 }
+
+func Q4_4_3(n int) (res int) {
+	F := make([]int, n+1)
+	for i := 1; i <= n; i++ {
+		for j := i; j <= n; j += i {
+			F[j] += 1
+		}
+	}
+	fmt.Println(F)
+	for i := 1; i <= n; i++ {
+		res += i * F[i]
+		fmt.Printf("i: %d, F[i]: %d\n", i, F[i])
+	}
+	return
+}
